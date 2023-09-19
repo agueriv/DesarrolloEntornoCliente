@@ -6,6 +6,10 @@
 }
 
 body {
+  background: url("../img/fondoAdivinaNum.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -14,6 +18,184 @@ body {
   justify-content: center;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2em;
+  box-shadow: 0px 0px 20px -9px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.6em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+  color: #ff8f00;
+  width: 90%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: #558b2f;
+}
+
+#retroalimentacion {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+
+#retroalimentacion span {
+  font-style: italic;
+}
+
+#numCandidato {
+  grid-area: entrada;
+  border: none;
+  font-size: 16px;
+  outline: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  background-color: #ffc107;
+  color: #0d3452cb;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  border-radius: 5px 50px 5px 50px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+#numCandidato:focus {
+  border: 2px solid #ff9100c7;
+  transform: translateY(-5px);
+  color: #444444;
+}
+
+::placeholder {
+  color: #444444;
+}
+
+#checkBtn {
+  grid-area: checkBtn;
+  border: none;
+  font-size: 16px;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #ffc107;
+  color: #444444;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  border-radius: 5px 50px 5px 50px;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+#checkBtn:hover {
+  color: #171717;
+  background-color: #ffca28;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
 .controls {
-  display: inline-flex;
+  display: grid;
+  grid-template: "entrada entrada entrada checkBtn" auto;
+  width: 80%;
+  column-gap: 0.5em;
+  margin: 2em 0px 2em 0px;
+}
+
+#menor {
+  grid-area: menor;
+  font-size: 1.2em;
+}
+#numMenor {
+  grid-area: numMenor;
+  font-size: 1.5em;
+  color: #c30010;
+  font-weight: 600;
+}
+#mayor {
+  grid-area: mayor;
+  font-size: 1.2em;
+}
+#numMayor {
+  grid-area: numMayor;
+  font-size: 1.5em;
+  color: #c30010;
+  font-weight: 600;
+}
+
+.containerTrys {
+  display: grid;
+  grid-template:
+    "menor mayor" auto
+    "numMenor numMayor" auto;
+  justify-items: center;
+  width: 80%;
+}
+
+/* CSS DE VOLVER A JUGAR */
+.volverAJugar {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50px;
+  display: none;
+  box-shadow: 0px 0px 20px -9px rgba(0, 0, 0, 0.1);
+}
+
+.volverAJugar .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
+
+.controls button {
+  width: 25%;
+  outline: 0;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.controls button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 8px -7px rgba(0, 0, 0, 0.4);
+}
+
+.controls button:active {
+  transform: scale(0.9);
+}
+
+#siBtn {
+  background: #15ab92;
+}
+
+#noBtn {
+  background: #c90469;
+}
+
+#volverAJugar h2 {
+  color: #ff8f00;
 }

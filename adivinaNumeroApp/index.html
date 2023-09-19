@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivina Numero - Ariel Guerrero</title>
+    <link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
     <!-- Fuente Quicksand -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,18 +16,30 @@
 </head>
 
 <body>
-    <h1>Advina mi número secreto</h1>
-    <h2 id="displayNumSecreto">?</h2>
-    <div class="controls">
-        <input id="numCandidato" type="text" name="numCandidato" placeholder="¿Qué número crees que es?" />
-        <button id="checkBtn" type="submit">Comprobar</button>
+    <div id="main" class="main">
+        <h1>Advina mi número secreto</h1>
+        <h2 id="displayNumSecreto">?</h2>
+        <p id="retroalimentacion"></p>
+        <div class="controls">
+            <input id="numCandidato" type="text" name="numCandidato" placeholder="¿Qué número crees que es?" />
+            <button id="checkBtn" type="button" onclick="checkTry()">Comprobar</button>
+        </div>
+
+        <div class="containerTrys">
+            <h4 id="menor">Número menor más cercano</h4>
+            <p id="numMenor">?</p>
+            <h4 id="mayor">Número mayor más cercano</h4>
+            <p id="numMayor">?</p>
+        </div>
     </div>
 
-    <div class="containerTrys">
-        <h4>Número menor más cercano</h4>
-        <p>Numero</p>
-        <h4>Número mayor más cercano</h4>
-        <p>Numero</p>
+    <div id="volverAJugar" class="volverAJugar">
+        <h2>¿Quieres volver a jugar?</h2>
+        <div class="controls">
+            <button id="siBtn" type="button" onclick="newPlay('si')">SÍ!</button>
+            <button id="noBtn" type="button" onclick="newPlay('no')">NO</button>
+        </div>
+        <p></p>
     </div>
 
     <!-- Archivos JavaScript -->
