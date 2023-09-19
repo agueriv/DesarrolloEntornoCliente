@@ -13,3 +13,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.controls {
+  display: inline-flex;
+}
