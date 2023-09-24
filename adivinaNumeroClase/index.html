@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advina el número</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>ADIVINA NÚMERO</h1>
+    <h2 id="displayNumSecreto">?</h2>
+    <h3 id="retroAlimentacion"></h3>
+    <div class="container">
+        <input id="userNumber" type="text">
+        <button id="checkTry" type="button" onclick="comprobarNum()"> Comprobar</button>
+    </div>
+    <button id="again" type="button" onclick="nuevaPartida()">Volver a jugar</button>
+
+    <script src="game.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
