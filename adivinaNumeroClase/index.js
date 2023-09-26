@@ -1,20 +1,25 @@
-userNumber = document.getElementById("userNumber");
-displayNum = document.getElementById("displayNumSecreto");
-retroAlimentacion = document.getElementById("retroAlimentacion");
-checkTry = document.getElementById("checkTry");
-again = document.getElementById("again");
+import { GAME } from "./modules/game.js";
 
-juego = new Game();
+let userNumber = document.getElementById("userNumber");
+let displayNum = document.getElementById("displayNumSecreto");
+let retroAlimentacion = document.getElementById("retroAlimentacion");
+let checkTry = document.getElementById("checkTry");
+let again = document.getElementById("again");
 
-function comprobarNum() {
+let juego = new GAME.game();
+
+checkTry.onclick = function () {
   retroAlimentacion.innerHTML = juego.checkNumber(userNumber.value);
   if (retroAlimentacion.innerHTML === "Felicidades, has ganado.") {
     displayNum.innerHTML = juego.randomNumber;
     again.style.visibility = "visible";
   }
-}
+};
 
-function nuevaPartida() {
+again.onclick = function () {
   userNumber.value = "";
+  displayNum.innerHTML = "?";
   retroAlimentacion.innerHTML = "";
-}
+  juego = new GAME.game();
+  again.style.visibility = "hidden";
+};

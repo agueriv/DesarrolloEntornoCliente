@@ -1,4 +1,6 @@
-class Game {
+let GAME = {};
+
+GAME.game = class Game {
   constructor() {
     this.randomNumber = Math.floor(Math.random() * 11);
   }
@@ -12,4 +14,6 @@ class Game {
       return "Felicidades, has ganado.";
     }
   }
-}
+};
+
+export { GAME };
